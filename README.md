@@ -25,4 +25,15 @@ A aplicação trata-se de uma API que pode ser utilizada para clientes realizare
 
 ---
 ## Passo a passo para realizar requisições na API
+#### Adicionar uma nova categoria de produto
+* Para adicionar uma nova categoria é preciso realizar uma requisição do tipo POST no seguinte endereço: http://localhost:3000/categories. No body, corpo da requisição, é necessário ter um código JSON informando o nome da categoria e o seu ícone, que pode ser um emoji.
 
+
+#### Listar categorias já criadas
+* Para listar uma categoria que já existe, é necessário realizar uma requisição do tipo GET no seguinte endereço: http://localhost:3000/categories. Assim, o servidor irá retornar todas as categorias já criadas na aplicação.
+
+#### Adicionar novo produto
+* Para adicionar um novo produto é necessário realizar uma requisição do tipo POST no seguinte endereço: http://localhost:3000/products. No corpo da requisição, é necessário conter um _formdata_, que é um conjunto de chaves e valores que representam campos de um elemento form (formulário) e seus valores.
+
+#### Listar produtos já criados
+* Para listar os produtos que já foram criados, é necessário realizar uma requisição do tipo GET no seguinte endereço: http://localhost:3000/products. O servidor irá retornar os dados de todos os produtos existentes na aplicação.
