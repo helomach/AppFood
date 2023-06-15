@@ -15,9 +15,7 @@ A aplicação trata-se de uma API que pode ser utilizada para clientes realizare
 
 * Comando `docker run --name 'nome do banco' -p 27017:27017 -d mongo` para iniciar um container Docker
 
-* Comando `npm i -g yarn` para instalar o yarn (gerenciador de pacotes para aplicar comandos prontos ao código de uma aplicação);
-
-* Comando `yarn dev` para inicializar o servidor. Se tudo rodar normalmente, aparecerá a mensagem "🚗Server is runing on http://localhost:8000" no terminal.
+* Comando `npm run dev` para inicializar o servidor. Se tudo rodar normalmente, aparecerá a mensagem "🚗Server is runing on http://localhost:8000" no terminal.
 
 * Para realizar as requisições, é necessário ter instalado alguma ferramenta cliente de API Rest, como por exemplo, o Insomnia.
 
