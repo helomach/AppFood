@@ -10,15 +10,16 @@ import { listOrders } from './app/useCases/orders/listOrders';
 import { createOrder } from './app/useCases/orders/createOrder';
 import { changeOrderStatus } from './app/useCases/orders/changeOrderStatus';
 import { cancelOrder } from './app/useCases/orders/cancelOrder';
+import { deleteCategory } from './app/useCases/categories/deleteCategory';
 export const router = Router();
 
 //configuração do multer
 const upload = multer({
 	storage: multer.diskStorage({
-		destination(req, file, callback){
+		destination(req, file, callback) {
 			callback(null, path.resolve(__dirname, '..', 'uploads'));
 		},
-		filename(req, file, callback){
+		filename(req, file, callback) {
 			callback(null, `${Date.now()}-${file.originalname}`);
 		},
 	})
@@ -30,6 +31,9 @@ router.get('/categories', listCategories);
 
 //Create category
 router.post('/categories', createCategory);
+
+//Delete category
+router.delete('/categories/:categoryId', deleteCategory);
 
 //List products
 router.get('/products', listProducts);

@@ -1,4 +1,4 @@
-import {model, Schema } from 'mongoose';
+import { model, Schema } from 'mongoose';
 
 export const Product = model('Product', new Schema({
 	name: {
@@ -19,7 +19,7 @@ export const Product = model('Product', new Schema({
 	},
 	ingredients: {
 		required: true,
-		type:[{
+		type: [{
 			name: {
 				type: String,
 				required: true,
